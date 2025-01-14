@@ -13,7 +13,7 @@ require (
 	github.com/tidwall/sjson v1.2.5 // indirect
 )
 
-replace github.com/daodao97/xgo => /Users/daodao/work/github/go/xgo
+// replace github.com/daodao97/xgo => /Users/daodao/work/github/go/xgo
 
 require (
 	filippo.io/edwards25519 v1.1.0 // indirect
