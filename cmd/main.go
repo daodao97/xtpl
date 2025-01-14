@@ -21,7 +21,7 @@ var Version string
 
 func init() {
 	if !utils.IsGoRun() {
-		xlog.SetLogger(xlog.StdoutJson(xlog.WithLevel(slog.LevelInfo)))
+		xlog.SetLogger(xlog.StdoutJson(xlog.WithLevel(slog.LevelDebug)))
 	}
 }
 

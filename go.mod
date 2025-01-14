@@ -3,13 +3,12 @@ module xtpl
 go 1.22.6
 
 require (
-	github.com/daodao97/xgo v0.0.0-20250102031546-160c324b2b15
+	github.com/daodao97/xgo v0.0.0-20250113041208-ee3b5019ceb4
 	github.com/gin-gonic/gin v1.10.0
 	github.com/go-sql-driver/mysql v1.8.1
 )
 
 require (
-	github.com/caarlos0/env v3.5.0+incompatible // indirect
 	github.com/shopspring/decimal v1.4.0 // indirect
 	github.com/tidwall/sjson v1.2.5 // indirect
 )
@@ -21,6 +20,7 @@ require (
 	github.com/beorn7/perks v1.0.1 // indirect
 	github.com/bytedance/sonic v1.11.6 // indirect
 	github.com/bytedance/sonic/loader v0.1.1 // indirect
+	github.com/caarlos0/env/v11 v11.3.1 // indirect
 	github.com/cespare/xxhash/v2 v2.2.0 // indirect
 	github.com/cloudflare/tableflip v1.2.3 // indirect
 	github.com/cloudwego/base64x v0.1.4 // indirect

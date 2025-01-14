@@ -12,10 +12,10 @@ import (
 )
 
 type config struct {
-	AdminPath string            `yaml:"admin_path"`
-	JwtSecret string            `yaml:"jwt_secret"`
-	Database  []*xdb.Config     `yaml:"database"`
-	Redis     []*xredis.Options `yaml:"redis"`
+	AdminPath string           `yaml:"admin_path"`
+	JwtSecret string           `yaml:"jwt_secret"`
+	Database  []xdb.Config     `yaml:"database" envPrefix:"DATABASE"`
+	Redis     []xredis.Options `yaml:"redis" envPrefix:"REDIS"`
 }
 
 func (c *config) Print() {
