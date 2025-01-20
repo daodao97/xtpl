@@ -34,8 +34,8 @@ func InitConf() error {
 		JwtSecret: "change_me",
 	}
 
-	if err := xapp.InitConf(&_c); err != nil {
-		return nil
+	if err := xapp.InitConf(_c); err != nil {
+		return err
 	}
 	_c.Print()
 
