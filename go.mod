@@ -3,7 +3,7 @@ module xtpl
 go 1.22.6
 
 require (
-	github.com/daodao97/xgo v0.0.0-20250113041208-ee3b5019ceb4
+	github.com/daodao97/xgo v0.0.0-20250224074921-e076096d3955
 	github.com/gin-gonic/gin v1.10.0
 	github.com/go-sql-driver/mysql v1.8.1
 )

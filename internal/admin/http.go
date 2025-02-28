@@ -29,5 +29,5 @@ func SetupRouter(e *gin.Engine) {
 
 	_ = xadmin.GinRoute(e)
 
-	// 添加路由
+	// 自定义路由
 }

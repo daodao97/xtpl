@@ -52,7 +52,7 @@ func h() http.Handler {
 	defer func() {
 		xapp.GenerateOpenAPIDoc(
 			e,
-			xapp.WithInfo("xtpl", Version),
+			xapp.WithInfo("xtpl", Version, "xtpl"),
 			xapp.WithBearerAuth(),
 		)
 	}()

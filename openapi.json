@@ -1,8 +1,9 @@
 {
   "openapi": "3.0.0",
   "info": {
-    "title": "xapp",
-    "version": "1.0.0"
+    "title": "xtpl",
+    "version": "",
+    "description": "xtpl"
   },
   "servers": [
     {
@@ -22,16 +23,7 @@
           "content": {
             "application/json": {
               "schema": {
-                "type": "object",
-                "properties": {
-                  "mode": {
-                    "type": "string",
-                    "description": "此字段是必需的"
-                  }
-                },
-                "required": [
-                  "mode"
-                ]
+                "$ref": "#/components/schemas/api.TestApi"
               }
             }
           }
@@ -42,12 +34,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "type": "object",
-                  "properties": {
-                    "message": {
-                      "type": "string"
-                    }
-                  }
+                  "$ref": "#/components/schemas/api.TestApiResponse"
                 }
               }
             }
@@ -57,6 +44,28 @@
     }
   },
   "components": {
+    "schemas": {
+      "api.TestApi": {
+        "type": "object",
+        "properties": {
+          "mode": {
+            "type": "string",
+            "description": "此字段是必需的"
+          }
+        },
+        "required": [
+          "mode"
+        ]
+      },
+      "api.TestApiResponse": {
+        "type": "object",
+        "properties": {
+          "message": {
+            "type": "string"
+          }
+        }
+      }
+    },
     "securitySchemes": {
       "bearerAuth": {
         "type": "http",
