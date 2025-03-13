@@ -31,16 +31,16 @@ func Get() *config {
 func InitConf() error {
 	_c = &config{
 		AdminPath: "/_",
-		JwtSecret: "change_me",
+	}
+
+	if err := xapp.InitConf(_c); err != nil {
+		return err
 	}
 
 	if _c.JwtSecret == "change_me" {
 		return fmt.Errorf("jwt_secret in conf.yaml is the default value [change_me], please change it")
 	}
 
-	if err := xapp.InitConf(_c); err != nil {
-		return err
-	}
 	_c.Print()
 
 	return nil

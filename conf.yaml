@@ -1,3 +1,4 @@
+jwt_secret: change_me
 database:
   - name: default
     driver: mysql

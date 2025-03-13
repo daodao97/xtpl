@@ -1,2 +1,2 @@
 dev:
-	go run -a ./cmd/... --enable-openapi true --app-env dev
+	go run . --enable-openapi true --app-env dev
