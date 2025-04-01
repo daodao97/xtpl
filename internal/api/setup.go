@@ -1,6 +1,8 @@
 package api
 
 import (
+	"net/http"
+
 	"github.com/daodao97/xgo/xapp"
 	"github.com/daodao97/xgo/xlog"
 	"github.com/gin-gonic/gin"
@@ -10,12 +12,12 @@ func SetupRouter(e *gin.Engine) {
 	e.GET("/ping", Ping)
 
 	g := e.Group("/v1").Use(func(ctx *gin.Context) {
-		// auth := ctx.GetHeader("Authorization")
-		// if auth == "" {
-		// 	ctx.JSON(http.StatusUnauthorized, gin.H{"error": "Unauthorized"})
-		// 	ctx.Abort()
-		// 	return
-		// }
+		auth := ctx.GetHeader("Authorization")
+		if auth == "" {
+			ctx.JSON(http.StatusUnauthorized, gin.H{"error": "Unauthorized"})
+			ctx.Abort()
+			return
+		}
 
 		ctx.Next()
 	})
