@@ -2,4 +2,4 @@
 
 git pull
 
-docker compose up --remove-orphans -d
+docker compose up --remove-orphans --build -d
