@@ -12,6 +12,47 @@
     }
   ],
   "paths": {
+    "/v1/page": {
+      "get": {
+        "tags": [
+          "v1"
+        ],
+        "summary": "",
+        "description": "",
+        "parameters": [
+          {
+            "name": "Page",
+            "in": "query",
+            "description": "默认值: 1",
+            "required": false,
+            "schema": {
+              "type": "integer"
+            }
+          },
+          {
+            "name": "Size",
+            "in": "query",
+            "description": "默认值: 10",
+            "required": false,
+            "schema": {
+              "type": "integer"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/xapp.PageResult[interface {}]"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
     "/v1/test": {
       "post": {
         "tags": [
@@ -62,6 +103,39 @@
         "properties": {
           "message": {
             "type": "string"
+          }
+        }
+      },
+      "xapp.Page": {
+        "type": "object",
+        "properties": {
+          "page": {
+            "type": "integer",
+            "description": "默认值: 1"
+          },
+          "size": {
+            "type": "integer",
+            "description": "默认值: 10"
+          }
+        }
+      },
+      "xapp.PageResult[interface {}]": {
+        "type": "object",
+        "properties": {
+          "items": {
+            "type": "array",
+            "items": {}
+          },
+          "page": {
+            "type": "integer",
+            "description": "默认值: 1"
+          },
+          "size": {
+            "type": "integer",
+            "description": "默认值: 10"
+          },
+          "total": {
+            "type": "integer"
           }
         }
       }
