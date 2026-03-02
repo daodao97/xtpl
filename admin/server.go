@@ -6,7 +6,6 @@ import (
 
 	"xproxy/admin/hook"
 	"xproxy/adminui"
-	"xproxy/backend"
 	"xproxy/dao"
 
 	"github.com/daodao97/xgo/xadmin"
@@ -41,7 +40,5 @@ func SetupRouter(e *gin.Engine) {
 
 	hook.RegHook()
 
-	a := xadmin.GinRoute(e)
-
-	backend.Setup(a)
+	_ = xadmin.GinRoute(e)
 }
