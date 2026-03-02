@@ -1,0 +1,9 @@
+services:
+    app:
+        build:
+            context: .
+            dockerfile: Dockerfile
+            target: final
+        command: ["/app/server", "--bind", "0.0.0.0:8080"]
+        ports:
+            - "8080:8080"

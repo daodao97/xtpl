@@ -1,0 +1,74 @@
+{
+  "orderBy": {
+    "field": "id",
+    "mod": "desc"
+  },
+  "formItems": [
+    {
+      "field": "email",
+      "label": "邮箱",
+      "type": "input",
+      "rules": "required"
+    },
+    {
+      "field": "user_name",
+      "label": "用户名",
+      "type": "input"
+    }
+  ],
+  "filter": [
+    {
+      "field": "id",
+      "label": "ID"
+    },
+    {
+      "field": "email",
+      "label": "邮箱"
+    },
+    {
+      "field": "user_name",
+      "label": "用户名"
+    }
+  ],
+  "headers": [
+    {
+      "field": "id",
+      "label": "ID",
+      "sortable": true
+    },
+    {
+      "field": "email",
+      "label": "邮箱"
+    },
+    {
+      "field": "user_name",
+      "label": "用户名"
+    },
+    {
+      "field": "created_at",
+      "label": "创建时间",
+      "type": "time",
+      "sortable": true
+    }
+  ],
+  "normalButton": [
+    {
+      "props": {
+        "type": "success"
+      },
+      "target": "/project_user/form",
+      "text": "新增",
+      "type": "jump"
+    }
+  ],
+  "rowButton": [
+    {
+      "props": {
+        "type": "primary"
+      },
+      "target": "/project_user/{id}",
+      "text": "编辑",
+      "type": "jump"
+    }
+  ]
+}

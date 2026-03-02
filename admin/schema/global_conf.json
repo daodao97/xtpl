@@ -1,0 +1,11 @@
+{
+    "formItems": [
+        {
+            "field": "claude_proxy",
+            "label": "Claude账号池代理",
+            "type": "switch"
+        }
+    ],
+    "saveApi": "/redis_cache/global_conf",
+    "getApi": "/redis_cache/global_conf"
+}

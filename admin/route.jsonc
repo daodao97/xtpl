@@ -1,0 +1,45 @@
+[
+    {
+      "id": 0,
+      "routes": [
+        {
+          "module_id": 0,
+          "name": "用户管理",
+          "type": 2,
+          "path": "#",
+          "icon": "ra-office-supplies",
+          "page_type": 7,
+          "role": "root",
+          "children": [
+            {
+              "module_id": 0,
+              "name": "用户列表",
+              "type": 2,
+              "path": "/project_user",
+              "icon": "ra-office-supplies",
+              "page_type": 7,
+              "role": "root"
+            }
+          ]
+        },
+        {
+          "module_id": 0,
+          "name": "全局配置",
+          "type": 2,
+          "path": "/global_conf",
+          "icon": "ra-office-supplies",
+          "page_type": 2,
+          "role": "root"
+        },
+        {
+          "module_id": 0,
+          "name": "管理员",
+          "type": 2,
+          "path": "/operator",
+          "icon": "ra-office-supplies",
+          "page_type": 7,
+          "role": "root"
+        }
+      ]
+    }
+  ]

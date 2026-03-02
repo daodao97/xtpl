@@ -1,0 +1,6 @@
+.git
+.idea
+.vscode
+.github
+web/node_modules
+admin/adminui/node_modules
