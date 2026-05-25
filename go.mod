@@ -3,7 +3,7 @@ module xproxy
 go 1.25.3
 
 require (
-	github.com/daodao97/xgo v0.0.0-20260220122306-fd06bb9a6476
+	github.com/daodao97/xgo v0.0.0-20260520021353-650ea7d8da5a
 	github.com/gin-gonic/gin v1.11.0
 	github.com/go-sql-driver/mysql v1.9.3
 )

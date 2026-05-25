@@ -22,8 +22,8 @@ github.com/cloudflare/tableflip v1.2.3 h1:8I+B99QnnEWPHOY3fWipwVKxS70LGgUsslG7CS
 github.com/cloudflare/tableflip v1.2.3/go.mod h1:P4gRehmV6Z2bY5ao5ml9Pd8u6kuEnlB37pUFMmv7j2E=
 github.com/cloudwego/base64x v0.1.6 h1:t11wG9AECkCDk5fMSoxmufanudBtJ+/HemLstXDLI2M=
 github.com/cloudwego/base64x v0.1.6/go.mod h1:OFcloc187FXDaYHvrNIjxSe8ncn0OOM8gEHfghB2IPU=
-github.com/daodao97/xgo v0.0.0-20260220122306-fd06bb9a6476 h1:KhjmCQ7X/kXtiD1hIObW5xhuRLKQJvjd2+JVgnxVCLg=
-github.com/daodao97/xgo v0.0.0-20260220122306-fd06bb9a6476/go.mod h1:Sq6AcqYI7nySZA21J32kxloVjfwuWWD6cO4SipGxRCA=
+github.com/daodao97/xgo v0.0.0-20260520021353-650ea7d8da5a h1:MJUj3MbQOR/OfPH2gVeObz7ErmA0mQ7lgryzWy4Uc5U=
+github.com/daodao97/xgo v0.0.0-20260520021353-650ea7d8da5a/go.mod h1:Sq6AcqYI7nySZA21J32kxloVjfwuWWD6cO4SipGxRCA=
 github.com/davecgh/go-spew v1.1.0/go.mod h1:J7Y8YcW2NihsgmVo/mv3lAwl/skON4iLHjSsI+c5H38=
 github.com/davecgh/go-spew v1.1.1/go.mod h1:J7Y8YcW2NihsgmVo/mv3lAwl/skON4iLHjSsI+c5H38=
 github.com/davecgh/go-spew v1.1.2-0.20180830191138-d8f796af33cc h1:U9qPSI2PIWSS1VwoXQT9A3Wy9MM3WgvqSxFWenqJduM=
