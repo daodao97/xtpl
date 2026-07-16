@@ -3,7 +3,7 @@ module xproxy
 go 1.25.3
 
 require (
-	github.com/daodao97/xgo v0.0.0-20260520021353-650ea7d8da5a
+	github.com/daodao97/xgo v0.0.0-20260713062215-b70644645abb
 	github.com/gin-gonic/gin v1.11.0
 	github.com/go-sql-driver/mysql v1.9.3
 )
@@ -76,5 +76,4 @@ require (
 	google.golang.org/protobuf v1.36.11 // indirect
 	gopkg.in/natefinch/lumberjack.v2 v2.2.1 // indirect
 	gopkg.in/yaml.v3 v3.0.1 // indirect
-	muzzammil.xyz/jsonc v1.0.0 // indirect
 )
