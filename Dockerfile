@@ -3,7 +3,7 @@ FROM node:20-alpine AS frontend-builder
 WORKDIR /build/adminui
 
 # 安装 pnpm
-RUN corepack enable && corepack prepare pnpm@latest --activate
+RUN corepack enable && corepack prepare pnpm@10.20.0 --activate
 
 # 先复制 package.json 和 lock 文件，利用缓存
 COPY adminui/package.json adminui/pnpm-lock.yaml ./
@@ -11,6 +11,18 @@ RUN pnpm install --frozen-lockfile
 
 # 复制源码并构建
 COPY adminui/ ./
+RUN pnpm build
+
+FROM node:20-alpine AS web-builder
+
+WORKDIR /build/web
+
+RUN corepack enable && corepack prepare pnpm@10.20.0 --activate
+
+COPY web/package.json web/pnpm-lock.yaml ./
+RUN pnpm install --frozen-lockfile
+
+COPY web/ ./
 RUN pnpm build
 
 FROM golang:1.25-alpine AS builder
@@ -26,6 +38,9 @@ COPY . .
 
 # 复制前端构建产物到 adminui/ui 目录
 COPY --from=frontend-builder /build/adminui/ui ./adminui/ui
+
+# 复制 SSR 客户端资源与 Goja server bundle
+COPY --from=web-builder /build/web/dist ./web/dist
 
 RUN CGO_ENABLED=0 GOOS=linux GOARCH=amd64 go build \
     -ldflags="-s -w -X main.Version=${BUILD_VERSION}" \

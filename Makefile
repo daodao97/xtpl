@@ -1,7 +1,11 @@
-.PHONY: clean build admin run
+.PHONY: install clean build admin admin_dev web web_dev run dev typecheck
 
 APP_NAME = server
 BUILD_DIR = $(PWD)/build
+
+install:
+	pnpm --dir adminui install --frozen-lockfile
+	pnpm --dir web install --frozen-lockfile
 
 up:
 	docker compose up -d
@@ -20,12 +24,23 @@ admin:
 admin_dev:
 	pnpm --dir adminui run dev	
 
-run: admin
+web:
+	pnpm --dir web install --frozen-lockfile
+	pnpm --dir web run build
+
+web_dev:
+	pnpm --dir web run dev
+
+run: admin web
 	go run ./cmd --app-env dev --bind :4001
 
-build:
+dev: web
+	DEV_MODE=1 DEV_SERVER_URL=http://127.0.0.1:3333 go run ./cmd --app-env dev --bind :4001
+
+build: admin web
 	# build the backend
-	go build -ldflags="-w -s" -o $(BUILD_DIR)/$(APP_NAME) main.go
+	mkdir -p $(BUILD_DIR)
+	go build -ldflags="-w -s" -o $(BUILD_DIR)/$(APP_NAME) ./cmd
 
 typecheck:
 	pnpm --dir web run typecheck

@@ -1,0 +1,8 @@
+node_modules/
+dist/*
+!dist/client/
+!dist/server/
+dist/client/*
+!dist/client/.keep
+dist/server/*
+!dist/server/.keep

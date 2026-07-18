@@ -4,11 +4,13 @@ tmp_dir = "tmp"
 
 [env]
   DISABLE_CRON=true
+  DEV_MODE=true
+  DEV_SERVER_URL="http://127.0.0.1:3333"
 
 [build]
   args_bin = ["--app-env", "dev"]
   bin = ";DISABLE_CRON=true ./tmp/main"
-  cmd = "go build -o ./tmp/main ."
+  cmd = "go build -o ./tmp/main ./cmd"
   delay = 1000
   exclude_dir = ["assets", "tmp", "build", "adminui"]
   exclude_file = []

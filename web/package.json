@@ -1,0 +1,27 @@
+{
+  "name": "xtpl-web",
+  "private": true,
+  "type": "module",
+  "packageManager": "pnpm@10.20.0",
+  "engines": {
+    "node": "^20.19.0 || >=22.12.0"
+  },
+  "scripts": {
+    "dev": "vite --host 127.0.0.1 --port 3333",
+    "typecheck": "tsc --noEmit",
+    "build": "pnpm run build:client && pnpm run build:server",
+    "build:client": "vite build --ssrManifest --outDir ./dist/client --emptyOutDir",
+    "build:server": "vite build -c vite.config.server.ts --outDir ./dist/server --emptyOutDir"
+  },
+  "dependencies": {
+    "@vue/server-renderer": "^3.5.39",
+    "vue": "^3.5.39",
+    "vue-router": "^5.2.0"
+  },
+  "devDependencies": {
+    "@types/node": "^26.1.1",
+    "@vitejs/plugin-vue": "^6.0.8",
+    "typescript": "^7.0.2",
+    "vite": "^8.1.4"
+  }
+}

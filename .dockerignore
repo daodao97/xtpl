@@ -3,4 +3,6 @@
 .vscode
 .github
 web/node_modules
-admin/adminui/node_modules
+adminui/node_modules
+web/dist
+adminui/ui

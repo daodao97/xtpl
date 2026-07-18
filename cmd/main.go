@@ -9,6 +9,7 @@ import (
 	"xproxy/conf"
 	"xproxy/dao"
 	"xproxy/job"
+	"xproxy/web"
 
 	"github.com/daodao97/xgo/xapp"
 	"github.com/daodao97/xgo/xlog"
@@ -54,6 +55,9 @@ func h() *gin.Engine {
 	r := xapp.NewGin(xapp.WithPrintReqeustLog(false))
 	api.Setup(r)
 	admin.SetupRouter(r)
+	if err := web.SetupRouter(r); err != nil {
+		panic(err)
+	}
 
 	return r
 }
